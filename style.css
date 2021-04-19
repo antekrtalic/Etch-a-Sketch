@@ -10,6 +10,12 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: #f5cb8c;
+}
+
+h1 {
+    font-family: 'Zen Dots', cursive;
+    font-weight: bold;
 }
 
 #boxes {
@@ -17,5 +23,5 @@ body {
     flex-wrap: wrap;
     width: 550px;
     height: 550px;
-    
+    background-color: #fff;
 }
