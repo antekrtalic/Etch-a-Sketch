@@ -39,11 +39,21 @@ for(let i = 0; i < x; i++){
     square.style.height = 'auto';
     square.style.width = `${w_square}px`;
     
+
     main_box.appendChild(square);
     
 }
 
 // Changing colors on each square
 
-let duljina = document.getElementsByClassName('little-square').length;
-console.log(duljina);
+let squares = document.getElementById('boxes').childNodes;
+
+squares.forEach(square => {
+    square.addEventListener('mouseover', mouseOver);
+});
+
+function mouseOver(e) {
+    let random_color = Math.floor(Math.random() * 16777215).toString(16);
+    console.log(random_color);
+    e.target.style.backgroundColor = `#${random_color}`;
+}
