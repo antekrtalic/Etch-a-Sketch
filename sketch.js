@@ -30,22 +30,24 @@ x = number * number
 let h_square = (h_mainbox*w_mainbox) / x;
 h_square = Math.floor(Math.sqrt(h_square));
 let w_square = (h_mainbox*w_mainbox) / x;
-w_square = Math.floor(Math.sqrt(w_square));
+w_square = Math.sqrt(w_square);
 
 console.log(h_square);
+console.log(w_square);
 
 // Fill window with small divs
 for(let i = 0; i < x; i++){
     let square = document.createElement('div');
     square.style.display = 'inline-block';
+    square.style.boxSizing = 'border-box';
     square.style.border = '1px solid black';
     square.classList.add("little-square");
-    square.style.maxHeight = `100%`;
-    square.style.maxWidth = `100%`;
+    square.style.height = `${h_square}px`;
+    square.style.width = `${w_square}px`;
     square.style.border = '1px solid black';
     square.style.margin = "0px";
     square.style.verticalAlign = 'top';
-    square.style.outline = 'none';
+    //square.style.outline = 'none';
     
     main_box.appendChild(square);
     
