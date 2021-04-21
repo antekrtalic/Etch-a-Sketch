@@ -11,14 +11,15 @@ function deleteSquare(){
     while(main_box.firstChild) {
         main_box.removeChild(main_box.firstChild);
     } 
-    let new_square = askUser();
-    return new_square;
+    
 }
 
 
 /* Ask user how much squares does he want */
 
 function askUser() {
+
+
     let user_input = parseInt(prompt("Enter how many square you want in each line: ", 16));
 
     if(user_input > 64) {
@@ -29,28 +30,30 @@ function askUser() {
     
 }
 
-let number = deleteSquare();
+let number = askUser();
 
 /* Specification of small squares */ 
 
-x = number * number
+let x = number * number
 let w_square = (w_mainbox / number);
 
 
 // Fill window with small divs
+
 for(let i = 0; i < x; i++){
     let square = document.createElement('div');
-    
+        
     square.style.boxSizing = 'border-box';
     square.style.border = '1px solid black';
     square.classList.add("little-square");
     square.style.height = 'auto';
     square.style.width = `${w_square}px`;
-    
+        
 
-    main_box.appendChild(square);
-    
+    main_box.appendChild(square);  
 }
+
+
 
 // Changing colors on each square
 
