@@ -10,7 +10,9 @@ const button = document.getElementById('button').addEventListener('click', delet
 function deleteSquare(){
     while(main_box.firstChild) {
         main_box.removeChild(main_box.firstChild);
-    }
+    } 
+    let new_square = askUser();
+    return new_square;
 }
 
 
@@ -18,10 +20,16 @@ function deleteSquare(){
 
 function askUser() {
     let user_input = parseInt(prompt("Enter how many square you want in each line: ", 16));
-    return user_input;
+
+    if(user_input > 64) {
+        alert("Enter number 1-64");
+        user_input = parseInt(prompt("Try again. Remember, number must be between 1-64"));;
+    }
+    return user_input; 
+    
 }
 
-let number = askUser();
+let number = deleteSquare();
 
 /* Specification of small squares */ 
 
