@@ -1,8 +1,11 @@
+/* *****GAME STARTS***** */
+
 const main_box = document.getElementById('boxes');
 main_box.style.height = '500px';
 main_box.style.width = '500px';
 
 let w_mainbox = main_box.offsetWidth;
+addElement(16);
 
 /* Button event listener */
 const button = document.getElementById('button').addEventListener('click', askUser);
@@ -18,10 +21,13 @@ function askUser() {
 
     let user_input = parseInt(prompt("Enter how many square you want in each line: ", 16));
 
+
     while(user_input > 64) {
-        alert("Enter number 1-64");
+
         user_input = parseInt(prompt("Try again. Remember, number must be between 1-64"));;
     }
+    
+
     addElement(user_input); 
     
 }
@@ -75,5 +81,4 @@ function changeHover() {
     }
 }
 
-/* *******GAME STAR ********** */
-askUser();
+

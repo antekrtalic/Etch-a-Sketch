@@ -10,21 +10,26 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f5cb8c;
+    background-color: #CAFAFE;
 }   
 
 #header {
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
+    
 }
 
 h1 {
-    font-family: 'Zen Dots', cursive;
+    font-family: 'Pacifico', cursive;;
     font-weight: bold;
+    font-size: 64px;
+    color: #329ba8;
+    text-shadow: 5px 5px #f1faa1;
 }
 
 #button {
@@ -38,10 +43,18 @@ h1 {
     
 }
 
+#box-around {
+    background-color: #b1abab;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+}
+
 #boxes {
     display: flex;    
     flex-wrap: wrap;
     background-color: #fff;
+    margin: 50px;
     
 }
 
