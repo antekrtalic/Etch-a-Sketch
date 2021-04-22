@@ -57,16 +57,31 @@ h1 {
     margin: 50px;
     
 }
+/* Github div */
 
-span {
+#git {
     position: absolute;
     left: 10px;
     bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+   
+}
+
+span {
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 21px;
+    
+}
+
+a {
+    margin: 5px;
 }
 
 img {
+    vertical-align: middle;
     border-radius: 50%;
 }
