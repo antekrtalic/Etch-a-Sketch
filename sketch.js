@@ -19,18 +19,20 @@ function askUser() {
         main_box.removeChild(main_box.firstChild);
     } 
 
-    let user_input = parseInt(prompt("Enter how many square you want in each line: ", 16));
+    let user_input = prompt("Enter how many square you want in each line: ");
 
+    console.log(parseInt(user_input));
 
-    while(user_input > 64) {
-
-        user_input = parseInt(prompt("Try again. Remember, number must be between 1-64"));;
+    while(parseInt(user_input) > 64 || parseInt(user_input) < 1 || user_input.length < 1 || isNaN(parseInt(user_input))) {
+        alert("Enter number between 1-64")
+        user_input = parseInt(prompt("Try again"));;
     }
     
 
     addElement(user_input); 
-    
 }
+
+
 
 
 // Fill window with small divs
@@ -70,7 +72,6 @@ function changeHover() {
     function mouseOver(e) {
         let random_color = Math.floor(Math.random() * 16777215).toString(16);
         count += 1;
-        console.log(random_color);
         if (count % 10 === 0) {
             random_color = "#000";
             e.target.style.backgroundColor = random_color;
