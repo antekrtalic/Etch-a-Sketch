@@ -21,12 +21,14 @@ function askUser() {
 
     let user_input = prompt("Enter how many square you want in each line: ");
 
-    console.log(parseInt(user_input));
+    console.log(user_input);
 
-    while(parseInt(user_input) > 64 || parseInt(user_input) < 1 || user_input.length < 1 || isNaN(parseInt(user_input))) {
-        alert("Enter number between 1-64")
-        user_input = parseInt(prompt("Try again"));;
+    while(parseInt(user_input) > 64 || parseInt(user_input) < 1 || isNaN(parseInt(user_input)) || user_input === null) {
+        alert("Enter number between 1-64");
+        user_input = parseInt(prompt("Try again"));
     }
+
+    
     
 
     addElement(user_input); 
